@@ -1,0 +1,67 @@
+{
+    "name": "donjan-deng/hyperf-permission",
+    "description": "hyperf权限管理组件",
+    "keywords": [
+        "donjan",
+        "hyperf",
+        "permission",
+        "permissions",
+        "roles",
+        "acl",
+        "rbac",
+        "security"
+    ],
+    "homepage": "https://github.com/donjan-deng/hyperf-permission",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Donjan",
+            "homepage": "https://github.com/donjan-deng",
+            "role": "Developer"
+        },
+        {
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-swoole": ">=4.4",
+        "hyperf/database": "~1.1.0",
+        "hyperf/db-connection": "^1.1",
+        "hyperf/cache": "~1.1.0",
+        "hyperf/utils": "~1.1.0",
+        "illuminate/filesystem": "^6.6"
+    },
+    "require-dev": {
+        "hyperf/testing": "~1.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Donjan\\Permission\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Donjan\\Permission\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Donjan\\Permission\\ConfigProvider"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
