@@ -70,12 +70,6 @@ class Permission extends Model implements PermissionContract
     /**
      * Find a permission by its name (and optionally guardName).
      *
-     * @param string $name
-     * @param string|null $guardName
-     *
-     * @throws \Spatie\Permission\Exceptions\PermissionDoesNotExist
-     *
-     * @return \Spatie\Permission\Contracts\Permission
      */
     public static function findByName(string $name, $guardName = null): PermissionContract
     {
@@ -91,12 +85,6 @@ class Permission extends Model implements PermissionContract
     /**
      * Find a permission by its id (and optionally guardName).
      *
-     * @param int $id
-     * @param string|null $guardName
-     *
-     * @throws \Spatie\Permission\Exceptions\PermissionDoesNotExist
-     *
-     * @return \Spatie\Permission\Contracts\Permission
      */
     public static function findById(int $id, $guardName = null): PermissionContract
     {
@@ -113,10 +101,6 @@ class Permission extends Model implements PermissionContract
     /**
      * Find or create permission by its name (and optionally guardName).
      *
-     * @param string $name
-     * @param string|null $guardName
-     *
-     * @return \Spatie\Permission\Contracts\Permission
      */
     public static function findOrCreate(string $name, $guardName = null): PermissionContract
     {

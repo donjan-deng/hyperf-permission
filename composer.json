@@ -32,8 +32,7 @@
         "hyperf/database": "~1.1.0",
         "hyperf/db-connection": "^1.1",
         "hyperf/cache": "~1.1.0",
-        "hyperf/utils": "~1.1.0",
-        "illuminate/filesystem": "^6.6"
+        "hyperf/utils": "~1.1.0"
     },
     "require-dev": {
         "hyperf/testing": "~1.1.0"

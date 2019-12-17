@@ -48,12 +48,6 @@ trait HasRoles
 
     /**
      * Scope the model query to certain roles only.
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles
-     * @param string $guard
-     *
-     * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeRole(Builder $query, $roles, $guard = null): Builder
     {
@@ -88,8 +82,6 @@ trait HasRoles
     /**
      * Assign the given role to the model.
      *
-     * @param array|string|\Spatie\Permission\Contracts\Role ...$roles
-     *
      * @return $this
      */
     public function assignRole(...$roles)
@@ -121,8 +113,6 @@ trait HasRoles
 
     /**
      * Revoke the given role from the model.
-     *
-     * @param string|\Spatie\Permission\Contracts\Role $role
      */
     public function removeRole($role)
     {
@@ -138,7 +128,6 @@ trait HasRoles
     /**
      * Remove all current roles and set the given ones.
      *
-     * @param  array|\Spatie\Permission\Contracts\Role|string  ...$roles
      *
      * @return $this
      */
@@ -152,8 +141,6 @@ trait HasRoles
     /**
      * Determine if the model has (one of) the given role(s).
      *
-     * @param string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles
-     * @param string|null $guard
      * @return bool
      */
     public function hasRole($roles, string $guard = null): bool
@@ -189,9 +176,6 @@ trait HasRoles
 
     /**
      * Determine if the model has any of the given role(s).
-     *
-     * @param string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles
-     *
      * @return bool
      */
     public function hasAnyRole($roles): bool
@@ -202,8 +186,6 @@ trait HasRoles
     /**
      * Determine if the model has all of the given role(s).
      *
-     * @param  string|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection  $roles
-     * @param  string|null  $guard
      * @return bool
      */
     public function hasAllRoles($roles, string $guard = null): bool

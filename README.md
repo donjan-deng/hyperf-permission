@@ -78,6 +78,10 @@ $user->roles()->sync([1,2,3]);
 $user->removeRole('管理员');
 //获取角色集合
 $user->getRoleNames();
+//获取所有权限
+$user->getAllPermissions();
+//获取树形菜单
+$user->getMenu();
 //验证
 $user->can('user-center/user/get');
 $user->can($permission->id);
@@ -92,6 +96,11 @@ $user->hasRole([$role1,$role2]);
 ```
 
 ## CHANGELOG
+
+### 1.0.1 - 2019-12-17
+
+- 去除错误注释
+- 去掉对illuminate/filesystem的依赖
 
 ### 1.0.0 - 2019-12-06
 

@@ -51,10 +51,6 @@ trait HasPermissions
     /**
      * Scope the model query to certain permissions only.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
-     *
-     * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopePermission(Builder $query, $permissions): Builder
     {
@@ -85,7 +81,6 @@ trait HasPermissions
     }
 
     /**
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
      * @return array
      */
@@ -109,8 +104,6 @@ trait HasPermissions
     /**
      * Determine if the model may perform the given permission.
      *
-     * @param string|int|\Spatie\Permission\Contracts\Permission $permission
-     * @param string|null $guardName
      *
      * @return bool
      * @throws PermissionDoesNotExist
@@ -149,8 +142,6 @@ trait HasPermissions
     /**
      * An alias to hasPermissionTo(), but avoids throwing an exception.
      *
-     * @param string|int|\Spatie\Permission\Contracts\Permission $permission
-     * @param string|null $guardName
      *
      * @return bool
      */
@@ -221,7 +212,6 @@ trait HasPermissions
     /**
      * Determine if the model has, via roles, the given permission.
      *
-     * @param \Spatie\Permission\Contracts\Permission $permission
      *
      * @return bool
      */
@@ -233,7 +223,6 @@ trait HasPermissions
     /**
      * Determine if the model has the given permission.
      *
-     * @param string|int|\Spatie\Permission\Contracts\Permission $permission
      *
      * @return bool
      * @throws PermissionDoesNotExist
@@ -295,8 +284,6 @@ trait HasPermissions
     /**
      * Grant the given permission(s) to a role.
      *
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
-     *
      * @return $this
      */
     public function givePermissionTo(...$permissions)
@@ -330,7 +317,6 @@ trait HasPermissions
     /**
      * Remove all current permissions and set the given ones.
      *
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
      *
      * @return $this
      */
@@ -344,7 +330,6 @@ trait HasPermissions
     /**
      * Revoke the given permission.
      *
-     * @param \Spatie\Permission\Contracts\Permission|\Spatie\Permission\Contracts\Permission[]|string|string[] $permission
      *
      * @return $this
      */
@@ -364,11 +349,6 @@ trait HasPermissions
         return $this->permissions->pluck('name');
     }
 
-    /**
-     * @param string|array|\Spatie\Permission\Contracts\Permission|\Illuminate\Support\Collection $permissions
-     *
-     * @return \Spatie\Permission\Contracts\Permission|\Spatie\Permission\Contracts\Permission[]|\Illuminate\Support\Collection
-     */
     protected function getStoredPermission($permissions)
     {
         $permissionClass = $this->getPermissionClass();
@@ -391,11 +371,6 @@ trait HasPermissions
         return $permissions;
     }
 
-    /**
-     * @param \Spatie\Permission\Contracts\Permission|\Spatie\Permission\Contracts\Role $roleOrPermission
-     *
-     * @throws \Spatie\Permission\Exceptions\GuardDoesNotMatch
-     */
     protected function ensureModelSharesGuard($roleOrPermission)
     {
 //        if (! $this->getGuardNames()->contains($roleOrPermission->guard_name)) {

@@ -26,7 +26,7 @@ class PermissionRegistrar {
     /** @var string */
     protected $roleClass;
 
-    /** @var \Illuminate\Support\Collection */
+    /** @var \Hyperf\Utils\Collection */
     protected $permissions;
 
     /** @var DateInterval|int */
@@ -81,7 +81,7 @@ class PermissionRegistrar {
      *
      * @param array $params
      *
-     * @return \Illuminate\Support\Collection
+     * @return \Hyperf\Utils\Collection
      */
     public function getPermissions(array $params = []): Collection {
         if ($this->permissions === null) {
@@ -107,7 +107,7 @@ class PermissionRegistrar {
     /**
      * Get an instance of the permission class.
      *
-     * @return \Spatie\Permission\Contracts\Permission
+     * @return \Donjan\Permission\Contracts\Permission
      */
     public function getPermissionClass(): Permission {
         return $this->container->get($this->permissionClass);
@@ -122,7 +122,7 @@ class PermissionRegistrar {
     /**
      * Get an instance of the role class.
      *
-     * @return \Spatie\Permission\Contracts\Role
+     * @return \Donjan\Permission\Contracts\Role
      */
     public function getRoleClass(): Role {
         return $this->container->get($this->roleClass);
