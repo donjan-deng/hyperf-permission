@@ -106,6 +106,10 @@ $user->hasRole([$role1,$role2]);
 
 ## CHANGELOG
 
+### 1.0.2 - 2020-01-19
+
+- [#4](https://github.com/donjan-deng/hyperf-permission/pull/4)兼容未启用innodb_large_prefix的老版本mysql
+
 ### 1.0.1 - 2019-12-17
 
 - 去除错误注释
