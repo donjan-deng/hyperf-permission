@@ -289,7 +289,7 @@ trait HasPermissions
     public function givePermissionTo(...$permissions)
     {
         $permissions = collect($permissions)
-                ->flatten(1)
+                ->flatten(10)
                 ->map(function ($permission) {
                     if (empty($permission)) {
                         return false;

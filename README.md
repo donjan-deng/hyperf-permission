@@ -81,8 +81,8 @@ $user->givePermissionTo('user-center/user/get');
 $user->assignRole('管理员');
 $user->assignRole($role->id);
 $user->assignRole($role);
-$user->assignRole(['管理员', '普通用户']);
-$user->assignRole([1,2,3]);
+$user->syncRoles(['管理员', '普通用户']);
+$user->syncRoles([1,2,3]);
 //删除角色
 $user->removeRole('管理员');
 //获取角色集合
@@ -106,18 +106,7 @@ $user->hasRole([$role1,$role2]);
 
 ## CHANGELOG
 
-### 1.0.2 - 2020-01-19
-
-- [#4](https://github.com/donjan-deng/hyperf-permission/pull/4)兼容未启用innodb_large_prefix的老版本mysql
-
-### 1.0.1 - 2019-12-17
-
-- 去除错误注释
-- 去掉对illuminate/filesystem的依赖
-
-### 1.0.0 - 2019-12-06
-
-- 修改至spatie/laravel-permission 3.3.0
+[CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
