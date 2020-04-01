@@ -87,7 +87,7 @@ trait HasRoles
     public function assignRole(...$roles)
     {
         $roles = collect($roles)
-                ->flatten(10)
+                ->flatten()
                 ->map(function ($role) {
                     if (empty($role)) {
                         return false;
