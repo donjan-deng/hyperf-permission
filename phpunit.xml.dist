@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
-         backupGlobals="false"
+<phpunit backupGlobals="false"
          backupStaticAttributes="false"
+         bootstrap="./tests/bootstrap.php"
          colors="true"
-         verbose="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Permissions Test Suite">
-            <directory>tests</directory>
+        <testsuite name="Tests">
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
     <filter>
-        <whitelist>
-            <directory suffix=".php">src/</directory>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
         </whitelist>
     </filter>
     <php>
-        <env name="CACHE_DRIVER" value="array"/>
+        <env name="DB_DRIVER" value="mysql"/>
+        <env name="DB_HOST" value="192.168.137.1"/>
+        <env name="DB_DATABASE" value="hyperf"/>
+        <env name="DB_PORT" value="3306"/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="DB_PASSWORD" value="root"/>
+        <env name="DB_CHARSET" value="utf8"/>
+        <env name="DB_COLLATION" value="utf8_unicode_ci"/>
+        <env name="DB_PREFIX" value=""/>
     </php>
 </phpunit>

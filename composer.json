@@ -29,13 +29,14 @@
     "require": {
         "php": "^7.2",
         "ext-swoole": ">=4.4",
-        "hyperf/database": "~1.1.0",
-        "hyperf/db-connection": "^1.1",
-        "hyperf/cache": "~1.1.0",
-        "hyperf/utils": "~1.1.22"
+        "hyperf/framework": "~1.1.22",
+        "hyperf/di": "~1.1.22"
     },
     "require-dev": {
-        "hyperf/testing": "~1.1.0"
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpstan/phpstan": "^0.10.5",
+        "hyperf/testing": "~1.1.0",
+        "swoft/swoole-ide-helper": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -56,7 +57,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "co-phpunit -c phpunit.xml.dist --colors=always"
     },
     "config": {
         "sort-packages": true
