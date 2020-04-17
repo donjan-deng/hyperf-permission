@@ -1,3 +1,15 @@
+# 1.1.1 & 1.0.4 - 2020-04-17
+
+## Fixed
+
+- permission和role MorphToMany 关联错误
+
+# 1.1.0 - 2020-04-01
+
+## Fixed
+
+- hyperf v1.1.22 已修复flatten BUG
+
 # 1.0.3 - 2020-03-23
 
 ## Fixed
