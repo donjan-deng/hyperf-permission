@@ -85,10 +85,15 @@ $user->syncRoles(['管理员', '普通用户']);
 $user->syncRoles([1,2,3]);
 //删除角色
 $user->removeRole('管理员');
+//获取用户集合
+$permission->users;
+$role->users;
 //获取角色集合
 $user->getRoleNames();
+$permission->roles;
 //获取所有权限
 $user->getAllPermissions();
+$role->permissions;
 //获取树形菜单
 $user->getMenu();
 //验证
