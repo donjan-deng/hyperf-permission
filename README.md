@@ -1,5 +1,7 @@
 # Hyperf权限管理组件
 
+<font color='#dc3545' size=5>推荐使用Hyperf Casbin:</font>https://github.com/donjan-deng/hyperf-casbin
+
 [spatie/laravel-permission](https://github.com/spatie/laravel-permission) 的Hyperf版
 
 使用示例代码：<https://github.com/donjan-deng/la-user-center>
