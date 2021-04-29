@@ -1,6 +1,8 @@
 # Hyperf权限管理组件
 
-<font color='#dc3545' size=5>推荐使用Hyperf Casbin:</font>https://github.com/donjan-deng/hyperf-casbin
+```diff
++ 推荐使用Hyperf Casbin:  https://github.com/donjan-deng/hyperf-casbin
+```
 
 转换至Casbin示例代码，按自己实际情况修改：
 
@@ -74,6 +76,10 @@ class User extends Model {
 }
 ```
 ## 使用
+
+```diff
+- 使用组件方法进行权限操作，不要使用Eloquent ORM的功能直接进行数据库操作。
+```
 
 ```
 use Donjan\Permission\Models\Permission;
